@@ -6,134 +6,166 @@
   <title>情绪性进食与激素波动</title>
   <style>
     :root {
-      --primary: #E91E63;
-      --secondary: #9C27B0;
-      --accent: #3F51B5;
-      --light: #F8BBD0;
-      --dark: #C2185B;
-      --text: #333;
-      --bg: #FFF5F5;
+      --main-text: #333333;
+      --bg-color: #FFFFFF;
+      --section-bg: #FAFAFA;
+      --border-light: #F0F0F0;
+      --card-bg: #FFFFFF;
+
+      /* 日系淡色 - 激素卡片边框色 */
+      --hormone-dopamine: #FF9E80;   /* 淡橙 */
+      --hormone-serotonin: #FFF176;  /* 淡黄 */
+      --hormone-endorphin: #C8E6C9;  /* 淡绿 */
+      --hormone-oxytocin: #E1BEE7;   /* 淡紫 */
+
+      /* 温和主色（用于标题等） */
+      --primary-text-accent: #444444;
+      --heading-color: #555555;
     }
+
     body {
       font-family: 'Helvetica Neue', Arial, sans-serif;
       line-height: 1.6;
-      color: var(--text);
-      background: var(--bg);
+      color: var(--main-text);
+      background: var(--bg-color);
       margin: 0;
       padding: 0;
     }
+
     header {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: white;
+      background: linear-gradient(to right, #F8F9FA, #E8F4F8);
+      color: var(--heading-color);
       padding: 3rem 2rem;
       text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
+
     .container {
       max-width: 1000px;
       margin: 0 auto;
       padding: 2rem;
+      background: var(--bg-color);
     }
+
     h1 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
+      color: var(--heading-color);
     }
+
     h2 {
-      color: var(--primary);
-      border-left: 4px solid var(--primary);
+      color: var(--heading-color);
+      border-left: 4px solid #AAAAAA;
       padding-left: 1rem;
       margin: 2.5rem 0 1.5rem;
     }
+
     h3 {
-      color: var(--secondary);
+      color: var(--heading-color);
       margin: 2rem 0 1rem;
     }
+
     .hormone-card {
-      background: white;
+      background: var(--card-bg);
       border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
       padding: 1.5rem;
       margin-bottom: 2rem;
       border-top: 4px solid;
     }
-    .dopamine { border-color: #FF5722; }
-    .serotonin { border-color: #FFC107; }
-    .endorphin { border-color: #4CAF50; }
-    .oxytocin { border-color: #2196F3; }
+
+    .dopamine { border-color: var(--hormone-dopamine); }
+    .serotonin { border-color: var(--hormone-serotonin); }
+    .endorphin { border-color: var(--hormone-endorphin); }
+    .oxytocin { border-color: var(--hormone-oxytocin); }
+
     .activity-card {
-      background: white;
+      background: var(--card-bg);
       border-radius: 8px;
       padding: 1.5rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      transition: transform 0.3s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      transition: transform 0.3s ease;
     }
+
     .activity-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
+
     .activity-icon {
       font-size: 2rem;
       margin-bottom: 1rem;
-      color: var(--primary);
+      color: var(--heading-color);
     }
+
     .diet-principles {
-      background: linear-gradient(to right, #F3E5F5, #E1BEE7);
+      background: var(--section-bg);
       padding: 2rem;
       border-radius: 12px;
       margin: 2rem 0;
     }
+
     .principle {
       display: flex;
       align-items: flex-start;
       margin-bottom: 1.5rem;
     }
+
     .principle-icon {
       font-size: 1.5rem;
       margin-right: 1rem;
-      color: var(--secondary);
+      color: var(--heading-color);
       flex-shrink: 0;
     }
+
     table {
       width: 100%;
       border-collapse: collapse;
       margin: 2rem 0;
-      background: white;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      background: var(--card-bg);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
     }
+
     th, td {
       padding: 1rem;
       text-align: left;
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid var(--border-light);
     }
+
     th {
-      background: var(--light);
-      color: var(--dark);
+      background: var(--section-bg);
+      color: var(--heading-color);
     }
+
     tr:hover {
-      background: #F5F5F5;
+      background: #F9F9F9;
     }
+
     footer {
       text-align: center;
       padding: 2rem;
       margin-top: 3rem;
-      color: #666;
-      border-top: 1px solid #eee;
+      color: #888888;
+      border-top: 1px solid var(--border-light);
     }
+
     .tag {
       display: inline-block;
-      background: var(--light);
-      color: var(--dark);
+      background: var(--section-bg);
+      color: var(--heading-color);
       padding: 0.3em 0.8em;
       border-radius: 1em;
       font-size: 0.9em;
       margin-right: 0.5em;
       margin-bottom: 0.5em;
     }
+
     .highlight {
       background: #FFF9C4;
       padding: 0.2em 0.4em;
       border-radius: 0.3em;
     }
+
     ul li {
       margin-bottom: 0.5rem;
     }
@@ -146,7 +178,6 @@
   </header>
 
   <div class="container">
-
     <section>
       <h2>什么是情绪性进食？</h2>
       <p>情绪性进食（Emotional Eating）是指个体在面对压力、焦虑、孤独、无聊或情绪低落时，不因生理饥饿，而是为了调节情绪而产生的进食行为。</p>
@@ -320,7 +351,7 @@
 
   </div>
 
- 
+  
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
