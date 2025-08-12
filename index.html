@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>情绪性进食与激素波动</title>
+  <style>
+    :root {
+      --primary: #E91E63;
+      --secondary: #9C27B0;
+      --accent: #3F51B5;
+      --light: #F8BBD0;
+      --dark: #C2185B;
+      --text: #333;
+      --bg: #FFF5F5;
+    }
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      color: var(--primary);
+      border-left: 4px solid var(--primary);
+      padding-left: 1rem;
+      margin: 2.5rem 0 1.5rem;
+    }
+    h3 {
+      color: var(--secondary);
+      margin: 2rem 0 1rem;
+    }
+    .hormone-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-top: 4px solid;
+    }
+    .dopamine { border-color: #FF5722; }
+    .serotonin { border-color: #FFC107; }
+    .endorphin { border-color: #4CAF50; }
+    .oxytocin { border-color: #2196F3; }
+    .activity-card {
+      background: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+    .activity-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+    .activity-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+    .diet-principles {
+      background: linear-gradient(to right, #F3E5F5, #E1BEE7);
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+    }
+    .principle {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+    }
+    .principle-icon {
+      font-size: 1.5rem;
+      margin-right: 1rem;
+      color: var(--secondary);
+      flex-shrink: 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    th, td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+    th {
+      background: var(--light);
+      color: var(--dark);
+    }
+    tr:hover {
+      background: #F5F5F5;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      margin-top: 3rem;
+      color: #666;
+      border-top: 1px solid #eee;
+    }
+    .tag {
+      display: inline-block;
+      background: var(--light);
+      color: var(--dark);
+      padding: 0.3em 0.8em;
+      border-radius: 1em;
+      font-size: 0.9em;
+      margin-right: 0.5em;
+      margin-bottom: 0.5em;
+    }
+    .highlight {
+      background: #FFF9C4;
+      padding: 0.2em 0.4em;
+      border-radius: 0.3em;
+    }
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>情绪性进食与激素波动</h1>
+    <p>当情绪遇上食欲：理解多巴胺、血清素、脑内啡与催产素如何影响你的饮食行为</p>
+  </header>
+
+  <div class="container">
+
+    <section>
+      <h2>什么是情绪性进食？</h2>
+      <p>情绪性进食（Emotional Eating）是指个体在面对压力、焦虑、孤独、无聊或情绪低落时，不因生理饥饿，而是为了调节情绪而产生的进食行为。</p>
+      <p><strong>常见诱因：</strong> 压力激素（皮质醇）升高、血清素下降、多巴胺寻求奖赏、催产素或脑内啡的缺乏。</p>
+    </section>
+
+    <section>
+      <h2>四大激素如何影响你的食欲与情绪？</h2>
+
+      <div class="hormone-card dopamine">
+        <h3>💫 多巴胺 (Dopamine)</h3>
+        <p><strong>"奖赏驱动"</strong> - 追求即时满足与愉悦感</p>
+        <p><span class="highlight">与进食关系：</span> 高糖高脂食物激活大脑奖赏回路，短期提升多巴胺，易导致依赖</p>
+        <p><span class="highlight">情绪诱因：</span> 压力下寻求「补偿性快乐」</p>
+      </div>
+
+      <div class="hormone-card serotonin">
+        <h3>☀️ 血清素 (Serotonin)</h3>
+        <p><strong>"情绪稳定剂"</strong> - 调节心情、睡眠与满足感</p>
+        <p><span class="highlight">与进食关系：</span> 色氨酸（血清素前体）不足时，易引发情绪低落和暴食倾向</p>
+        <p><span class="highlight">情绪诱因：</span> 季节变化、焦虑、自我评价低</p>
+      </div>
+
+      <div class="hormone-card endorphin">
+        <h3>💪 脑内啡 (Endorphin)</h3>
+        <p><strong>"天然止痛 & 愉悦激素"</strong> - 缓解痛苦，带来舒适感</p>
+        <p><span class="highlight">与进食关系：</span> 甜食和脂肪可短暂提升脑内啡，形成情绪安慰机制</p>
+        <p><span class="highlight">情绪诱因：</span> 疼痛、压力、悲伤时寻求「自我安抚」</p>
+      </div>
+
+      <div class="hormone-card oxytocin">
+        <h3>💞 催产素 (Oxytocin)</h3>
+        <p><strong>"连接与安心激素"</strong> - 促进亲密感与安全感</p>
+        <p><span class="highlight">与进食关系：</span> 社交支持充足时，可降低情绪性进食频率</p>
+        <p><span class="highlight">情绪诱因：</span> 孤独、缺乏陪伴、情感隔离</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>常见情绪性进食场景 & 激素机制</h2>
+      <div class="activity-grid">
+        <div class="activity-card">
+          <div class="activity-icon">😫</div>
+          <h3>工作压力大时狂吃零食</h3>
+          <p><strong>激活激素：</strong> <span class="tag">多巴胺</span> <span class="tag">脑内啡</span></p>
+          <p><strong>机制：</strong> 压力 → 皮质醇↑ → 渴求高糖高脂奖赏 → 多巴胺短暂提升</p>
+          <p><strong>替代方案：</strong> 深呼吸、快走、捏压力球</p>
+        </div>
+
+        <div class="activity-card">
+          <div class="activity-icon">😢</div>
+          <h3>情绪低落时暴饮暴食甜食</h3>
+          <p><strong>激活激素：</strong> <span class="tag">血清素</span> <span class="tag">脑内啡</span></p>
+          <p><strong>机制：</strong> 悲伤 → 血清素下降 → 进食甜食短暂提升情绪</p>
+          <p><strong>替代方案：</strong> 温暖饮品、写情绪日记、与朋友聊天</p>
+        </div>
+
+        <div class="activity-card">
+          <div class="activity-icon">😤</div>
+          <h3>焦虑时不停咀嚼/进食</h3>
+          <p><strong>激活激素：</strong> <span class="tag">多巴胺</span> <span class="tag">皮质醇</span></p>
+          <p><strong>机制：</strong> 不安感驱动「控制性进食」或无意识咀嚼</p>
+          <p><strong>替代方案：</strong> 正念饮食、嚼口香糖、渐进式肌肉放松</p>
+        </div>
+
+        <div class="activity-card">
+          <div class="activity-icon">🥲</div>
+          <h3>孤独时通过外卖寻求安慰</h3>
+          <p><strong>激活激素：</strong> <span class="tag">催产素</span> <span class="tag">血清素</span></p>
+          <p><strong>机制：</strong> 缺乏人际连接 → 渴望情感补偿 → 用食物填补空虚</p>
+          <p><strong>替代方案：</strong> 联系亲友、养宠物、参与兴趣社群</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>情绪稳定饮食原则</h2>
+      <div class="diet-principles">
+        <div class="principle">
+          <div class="principle-icon">🥦</div>
+          <div>
+            <h3>稳定血糖 = 稳定情绪</h3>
+            <ul>
+              <li>选择低GI碳水：燕麦、糙米、全麦面包</li>
+              <li>每餐搭配蛋白质 & 膳食纤维</li>
+              <li>避免精制糖与快速消化的零食</li>
+            </ul>
+          </div>
+        </div>
+        <div class="principle">
+          <div class="principle-icon">🐟</div>
+          <div>
+            <h3>富含Omega-3的食物</h3>
+            <ul>
+              <li>三文鱼、沙丁鱼、亚麻籽、核桃</li>
+              <li>有助于缓解炎症，支持血清素与多巴胺平衡</li>
+            </ul>
+          </div>
+        </div>
+        <div class="principle">
+          <div class="principle-icon">🍌</div>
+          <div>
+            <h3>色氨酸丰富的食物</h3>
+            <ul>
+              <li>香蕉、鸡蛋、火鸡、乳制品</li>
+              <li>帮助身体合成血清素，改善情绪</li>
+            </ul>
+          </div>
+        </div>
+        <div class="principle">
+          <div class="principle-icon">🫐</div>
+          <div>
+            <h3>抗氧化 & 抗炎食物</h3>
+            <ul>
+              <li>蓝莓、深绿叶菜、坚果、黑巧克力（适量）</li>
+              <li>减少氧化压力对大脑的影响</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p><strong>🥗 小结：</strong> 通过营养均衡的饮食，稳定血糖与神经递质水平，有助于减少因激素波动导致的暴食与情绪性进食。</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>营养素/食物</th>
+            <th>对激素的影响</th>
+            <th>推荐食物</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Omega-3脂肪酸</td>
+            <td>↑ 血清素敏感性，降低炎症</td>
+            <td>三文鱼、亚麻籽、核桃</td>
+          </tr>
+          <tr>
+            <td>色氨酸</td>
+            <td>血清素前体，改善情绪</td>
+            <td>鸡蛋、香蕉、火鸡、乳制品</td>
+          </tr>
+          <tr>
+            <td>镁元素</td>
+            <td>调节神经系统，舒缓压力反应</td>
+            <td>菠菜、南瓜籽、黑巧（适量）</td>
+          </tr>
+          <tr>
+            <td>复合碳水</td>
+            <td>稳定血糖，避免情绪震荡</td>
+            <td>燕麦、糙米、全麦面包</td>
+          </tr>
+          <tr>
+            <td>抗氧化食物</td>
+            <td>减少脑部氧化压力，保护神经</td>
+            <td>蓝莓、坚果、绿茶、深色蔬菜</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>科学参考</h2>
+      <ul>
+        <li>Harvard Health Publishing：《Why stress causes people to overeat》</li>
+        <li>Nature Reviews Neuroscience：《Serotonin and dopamine in mood regulation》</li>
+        <li>Appetite Journal：《Emotional eating and the role of cortisol》</li>
+        <li>Frontiers in Psychology：《The neuroscience of comfort food》</li>
+        <li>NIH MedlinePlus：《Stress, hormones, and appetite》</li>
+      </ul>
+    </section>
+
+  </div>
+
+ 
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
